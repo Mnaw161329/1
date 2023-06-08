@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="main-script.js"></script>
+  <title>My First</title>
+</head>
+<body>
+    <div class="container" id="the-while-body">
+        <div id="log-box">
+            <div class="log-head flex">Web-App</div>
+            
+            <div class="log-box">
+                <div class="input-container">
+                    <input type="text" required>
+                    <label>ENTER-NAME</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" required>
+                    <label>ENTER-EMAIL</label>
+                </div>
+                <div class="input-container">
+                    <input type="date" required>
+                    <label>DATE-OF-BIRTH</label>
+                </div>
+                <div class="input-container">
+                    <input type="submit" value="CREAT ACCOUNT" onclick="enter()">
+                </div>
+            </div>
+            <div class="log-help">
+                <ul>
+                    <div class="log-li">
+                        <li class="fa fa-star"></li>
+                        <p> Enter your real name to see your img in profile. </p>
+                    </div>
+                    <div class="log-li">
+                        <li class="fa fa-star"></li>
+                        <p> Fake email can use to entery. </p>
+                    </div>
+                    <div class="log-li">
+                        <li class="fa fa-star"></li>
+                        <p> Date of birth tag only uses for decation. </p>
+                    </div>
+                    <div class="log-li">
+                        <li class="fa fa-star"></li>
+                        <p> All data will not store on everywhere.</p>
+                    </div>
+                </ul>
+            </div>
+        </div>  
+        <div class="all-sheet-style sheet-1 home" id="home">
+            <div class="header flex">
+                <a href="#" class="fa fa-bars icon a all" data-name="setting"></a>
+                <h2>WebApp Frame</h2>
+                <a href="#" class="fa fa-ellipsis-v icon a all" data-name="more"></a>
+            </div>
+            <div class="space"></div>
+            <div class="acc-info flex">
+                <div class="profile-img-border">
+                    <img src="./img/profile.jpg">
+                </div>
+                <div id="user-info">
+                    <div class="user-info" id="user-name">ABC DEF GHI</div>
+                    <div class="user-info" id="user-email">abcd123@gmail.com</div>
+                </div>
+                <div id="edit-user-info" class="flex all" data-name="edit">
+                    <i class="fa fa-pencil icon i"></i>
+                    <p> Edit </p>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="category">
+                    <i class="fa fa-users icon"></i>
+                    <p class="category-name all" data-name="family">My Family</p>
+                </div>
+                <div class="category">
+                    <i class="fa fa-image icon"></i>
+                    <p class="category-name all" data-name="photo">Photos</p>
+                </div>
+                <div class="category">
+                    <i class="fa fa-film icon"></i>
+                    <p class="category-name all" data-name="video">Videos</p>
+                </div>
+                <div class="category">
+                    <i class="fa fa-music icon"></i>
+                    <p class="category-name all" data-name="music">Songs</p>
+                </div>
+                <div class="category">
+                    <i class="fa fa-folder-tree icon"></i>
+                    <p class="category-name all" data-name="other">Other</p>
+                </div>
+            </div>
+            <div class="recent">
+                <div class="recent-head flex">
+                    <i class="fa fa-clock-rotate-left icon"></i>
+                    <h3>Recent</h3>
+                    <a href="#" class="fa fa-ellipsis-h icon"></a>
+                </div>
+                <div class="recent-body">
+                    <div class="recent-scroll flex">
+                        <div class="recent-item">
+                            <video src="./video/1.mp4" autoplay muted loop></video>
+                            <p class="recent-caption">The man play with a cute dog.</p>
+                        </div>
+                        <div class="recent-item">
+                            <video src="./video/3.mp4" autoplay muted loop></video>
+                            <p class="recent-caption">Tong Hua《童话》 Guitar Chord </p>
+                        </div>
+                        <div class="recent-item">
+                             <video src="./video/2.mp4" autoplay muted loop></video>
+                             <p class="recent-caption">Nature and beauty of beach</p>
+                        </div>
+                        <div class="recent-item">
+                             <video src="./video/4.mp4" autoplay muted loop></video>
+                             <p class="recent-caption">The Sun Light and Innlay Water</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+const all = document.querySelectorAll(".all");
+
+for (const classes of all) {
+    classes.addEventListener("click", (e) => {
+        //alert('click');
+        let cls = classes.dataset.name;
+        switch (cls) {
+            //open html tag
+            case 'setting':
+                open("setting.html");
+                break;
+            case 'more':
+                open("more.html");
+                break;
+            case 'family':
+                open("my-family.html");
+                break;
+            case 'photo':
+                open("photo.html")
+                break;
+            case 'video':
+                open("video.html");
+                break;
+            case 'music':
+                open("music.html");
+                break;
+            case 'other':
+                open("web.html");
+                break;
+            case 'edit':
+                open("edit.html");
+                break;
+            case 'close':
+                close();
+            default :
+                alert("Something went wrong!");
+        }
+    });
+}
+</script>
+</body>
+</html>
