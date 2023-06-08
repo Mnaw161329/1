@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="main-script.js"></script>
+  <title>My First</title>
+</head>
+<body>
+    <div class="container" id="the-while-body">
+      <div class="sheet-1" id="">
+        <div class="header flex">
+            <a href="#" class="fa fa-arrow-left icon a" onclick="back()"></a>
+            <input type="search" id="webSearch" class="search-bar" placeholder="Search...">
+            <a href="#" class="fa fa-search icon a" onclick="webSearch()"></a>
+        </div>
+        <div class="space"></div>
+        <div class="space-helf"></div>
+        
+        <div class="trending-web">
+            <h class="web-type"> Tranding </h>
+            <div class="website url" data-url="chat.openai">
+                <div class="web-icon">
+                    <img src="./img/ChatGPT.png">
+                </div>
+                <div class="web-name">ChatGPT</div>
+            </div>
+            <div class="website url" data-url="w3schools">
+                <div class="web-icon">
+                    <img src="./img/w3school.jpg">
+                </div>
+                <div class="web-name">W3</div>
+            </div>
+            <div class="website url" data-url="git">
+                <div class="web-icon">
+                    <img src="./img/git.png">
+                </div>
+                <div class="web-name">Git</div>
+            </div>
+            <div class="website">
+                <div class="web-icon url" data-url="google">
+                    <img src="./img/google.jpg">
+                </div>
+                <div class="web-name">Google</div>
+            </div>
+        </div>
+        
+        <h class="popular-web-head">Commonly used</h>
+        <div class="popular-websites flex">
+            <div class="popular-web url" data-url="facebook">
+                <i class="fa fa-facebook icon"></i>
+                <p>Facebook</p>
+            </div>
+            <div class="popular-web url" data-url="facebook">
+                <i class="fa fa-youtube icon"></i>
+                <p>Youtube</p>
+            </div>
+            <div class="popular-web url" data-url="instagram">
+                <i class="fa fa-instagram icon"></i>
+                <p>Instagram</p>
+            </div>
+            <div class="popular-web url" data-url="tiktok">
+                <i class="fa fa-tiktok icon"></i>
+                <p>Tiktok</p>
+            </div>
+            <div class="popular-web url" data-url="wechat">
+                <i class="fa fa-wechat icon"></i>
+                <p>Wechat</p>
+            </div>
+            <div class="popular-web url" data-url="telegram">
+                <i class="fa fa-paper-plane icon"></i>
+                <p>Telegram</p>
+            </div>
+            <div class="popular-web url" data-url="github">
+                <i class="fa fa-github icon"></i>
+                <p>Github</p>
+            </div>
+            <div class="popular-web url" data-url="python">
+                <i class="fa fa-python icon"></i>
+                <p>Python</p>
+            </div>
+            <div class="popular-web url" data-url="ai">
+                <i class="fa fa-robot icon"></i>
+                <p>AI</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+const URLS = document.querySelectorAll('.url');
+
+for(const URL of URLS){
+    URL.addEventListener('click',(e) => {
+        const https = 'https:/\/';
+        const com = '.com';
+        let website = URL.dataset.url;
+        const url = https+website+com;
+        switch (website) {
+            case 'chat.openai':
+                open(url);
+                break;
+            case 'w3schools':
+                open(url);
+                break;
+            case 'git':
+                open(url);
+                break;
+            case 'google':
+                open(url);
+                break;
+            case 'facebook':
+                open(url);
+                break;
+            case 'youtube':
+                open(url);
+                break;
+            case 'instagram':
+                open(url);
+                break;
+            case 'tiktok':
+                open(url);
+                break;
+            case 'wechat':
+                open(url);
+                break;
+            case 'telegram':
+                open(url);
+                break;
+            case 'github':
+                open(url);
+                break;
+            case 'python':
+                open(url);
+                break;
+            case 'ai':
+                open(url);
+                break;
+            //default:
+            //    alert(error);
+        }
+    });
+}
+
+</script>
+</body>
+</html>

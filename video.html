@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="../css/video.css">
+  <script src="main-script.js"></script>
+  <script src="video.js"></script>
+  <title>My First</title>
+</head>
+<body>
+    <div class="container" id="the-while-body">
+        <div class="sheet-1" id="home">
+            <div class="header flex">
+                <a href="#" class="fa fa-arrow-left icon a" onclick="back()"></a>
+                <h2>Video</h2>
+                <a href="#" class="fa fa-ellipsis-v icon a" onclick="Open()"></a>
+            </div>
+             
+            <div class="space"></div>
+            
+            <div class="video">
+                <div class="slide">
+                    <div class="img">
+                        <video src="./video/1.mp4" autoplay loop muted></video>
+                    </div>
+                    <div class="img">
+                        <video src="./video/2.mp4" autoplay loop muted></video>
+                    </div>
+                    <div class="img">
+                        <video src="./video/3.mp4" autoplay loop muted></video>
+                    </div>
+                    <div class="img">
+                        <video src="./video/4.mp4" autoplay loop muted></video>
+                    </div>
+                </div>
+                <div class="popular-now">
+                    <div class="choose">
+                        <i class="fa fa-crown icon i"></i>
+                        <p>Hot</p>
+                    </div>
+                    <div class="choose">
+                        <i class="fa fa-star icon i"></i>
+                        <p>Popular</p>
+                    </div>
+                    <div class="choose">
+                        <i class="fa fa-heart icon i"></i>
+                        <p>Favorite</p>
+                    </div>
+                    <div class="choose">
+                        <i class="fa fa-play icon i" ></i>
+                        <p>YouTube</p>
+                    </div>
+                </div>
+                <div class="video-list">
+                    <div class="video-head">
+                        <h3>Recommend</h3>
+                    </div>
+                    <div class="video-trending">
+                        <!-- iframes -->
+                    </div>
+                    <div class="video-head">
+                        <h3>Today Hot</h3>
+                    </div>
+                    <div class="video-container">
+                        <!-- iframes -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+const all = document.querySelectorAll("frame");
+
+for (const classes of all) {
+    classes.addEventListener("click", (e) => {
+        //alert('click');
+        let cls = classes.data.name;
+        console.log(cls);
+        switch (cls) {
+            //open html tag
+            case 'setting':
+                open("setting.html");
+                break;
+            case 'more':
+                open("more.html");
+                break;
+            case 'family':
+                open("my-family.html");
+                break;
+            case 'photo':
+                open("photo.html")
+                break;
+            case 'video':
+                open("video.html");
+                break;
+            case 'music':
+                open("music.html");
+                break;
+            case 'file':
+                open("file.html");
+                break;
+            case 'other':
+                open("other.html");
+                break;
+            case 'close':
+                close();
+            default :
+                alert("Something went wrong!");
+        }
+    });
+}
+</script>
+
+</body>
+</html>

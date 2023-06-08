@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="main-script.js"></script>
+  <title>My First</title>
+</head>
+<body id="body">
+    <div class="container" id="the-while-body">
+      <div class="sheet-1" id="home">
+        <div class="header flex">
+            <a href="" class="fa fa-arrow-left icon a" onclick="back()"></a>
+            <h2>Setting</h2>
+            <a href="#" class="fa fa-check icon a" onclick="save()"></a>
+        </div>
+        <div class="space"></div>
+        
+        <h3 class="group-name">Themes</h3>
+        <div class="categories">
+            <div class="category">
+                <span class="fa fa-brush icon"></span>
+                <p class="category-name">Background Color</p>
+                <input id="bgColor" type="color" class="input" value="#17242a">
+            </div>
+            <div class="category">
+                <i class="fa fa-palette icon"></i>
+                <p class="category-name">Text Color</p>
+                <input id="textColor" type="color" class="input" value="#fafafa">
+            </div>
+            <div class="category">
+                <i class="fa fa-smile icon"></i>
+                <p class="category-name">Icon Color</p>
+                <input id="iconColor" type="color" class="input" value="#fafafa">
+            </div>
+            <div class="category">
+                <i class="fa fa- icon">__</i>
+                <p class="category-name">Border Color</p>
+                <input id="borderColor" type="color" class="input" value="#223333">
+            </div>
+            <div class="category">
+                <i class="fa fa-font-awesome icon"></i>
+                <p class="category-name">Font Family</p>
+                <input id="fontFamily" type="text" class="input type-text" value="Fantasy">
+            </div>
+            <div class="category">
+                <i class="fa fa-font icon"></i>
+                <p class="category-name">Font Style</p>
+                <input id="fontStyle" type="text" class="input type-text" value="None">
+            </div>
+            <div class="category">
+                <span class="fa fa-redo icon"></span>
+                <p id="default" class="category-name">Default</p>
+            </div>
+        </div>
+        <div class="categories" id="menu-categories">
+            <div class="category">
+                <span class="fa fa-x icon"></span>
+                <p id="exit" class="category-name">Exit</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
