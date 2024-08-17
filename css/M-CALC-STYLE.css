@@ -5,7 +5,6 @@
     font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
-    cursor: pointer;
 }
 
 body{
@@ -101,6 +100,7 @@ body{
     color: #DEDEDE;
     background: #2A2A2A;
     box-shadow: inset 0px 0px 10px #8A8A8A;
+    cursor: pointer;
 }
 
 .container #keys-container .keys:hover{
